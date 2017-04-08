@@ -21,7 +21,7 @@ public class InitClazz implements ServletContextListener{
 				"黄焖茄子,韩式烤肉饭,鱼粉面," +
 				"三味泡馍,麻辣烫,一号饭堂,民族餐厅," +
 				"麻辣串,超市里面零食,江西瓦罐," +
-				"煲仔饭,这顿省了谢谢,");
+				"煲仔饭,这顿省了谢谢");
 		
 	}
 

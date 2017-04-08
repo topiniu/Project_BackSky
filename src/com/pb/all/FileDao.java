@@ -42,10 +42,10 @@ public class FileDao {
 				
 				String line = null;
 				while((line=br.readLine())!=null){
-					dataString += line;
-					dataString += ",";
+					dataString += line + ",";
 				}
 				
+				dataString = dataString.substring(0,dataString.length()-1);
 				br.close();
 				fr.close();
 			}
