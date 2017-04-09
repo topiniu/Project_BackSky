@@ -24,9 +24,6 @@
   <servlet-name>WriteData</servlet-name>
   <url-pattern>/ajax/writeData</url-pattern>
  </servlet-mapping>
- <welcome-file-list>
-  <welcome-file>index.jsp</welcome-file>
- </welcome-file-list>
  <login-config>
   <auth-method>BASIC</auth-method>
  </login-config>
