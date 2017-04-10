@@ -5,7 +5,7 @@ import java.io.*;
 public class FileDao {
 	public void writeData(String dataString) {		
 		try {
-			File file = new File("data.txt");
+			File file = new File("./data/data.txt");
 			
 			if(file.exists())
 				file.delete();
@@ -32,7 +32,7 @@ public class FileDao {
 	public String readData(){
 
 		try {
-			File file = new File("data.txt");
+			File file = new File("./data/data.txt");
 			String dataString = "";
 			if(!file.exists()){
 				return null;
