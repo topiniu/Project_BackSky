@@ -16,6 +16,21 @@
   <servlet-name>WriteData</servlet-name>
   <servlet-class>com.pb.all.WriteData</servlet-class>
  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ManagerServlet</servlet-name>
+    <servlet-class>com.pb.project_a.ManagerServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddQuestionServlet</servlet-name>
+    <servlet-class>com.pb.project_a.AddQuestionServlet</servlet-class>
+  </servlet>
+
+
+
  <servlet-mapping>
   <servlet-name>GetData</servlet-name>
   <url-pattern>/ajax/getData</url-pattern>
@@ -24,6 +39,14 @@
   <servlet-name>WriteData</servlet-name>
   <url-pattern>/ajax/writeData</url-pattern>
  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ManagerServlet</servlet-name>
+    <url-pattern>/ajax/manager</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddQuestionServlet</servlet-name>
+    <url-pattern>/ajax/addQuestion</url-pattern>
+  </servlet-mapping>
  <login-config>
   <auth-method>BASIC</auth-method>
  </login-config>

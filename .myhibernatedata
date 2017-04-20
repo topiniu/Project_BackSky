@@ -1,0 +1,17 @@
+#MyEclipse Hibernate Properties
+#Thu Apr 20 10:35:46 CST 2017
+genVersionTag=false
+sessionFactoryName=com.pb.project_a.HibernateSessionFactory
+genAnnotations=false
+configFile=/Project_BackSky/src/hibernate.cfg.xml
+reStrategyClass=
+sessionFactoryId=
+profile=
+detectM2M=false
+genBasicCompId=false
+keyGenerator=
+createConfigFile=true
+basePersistenceClass=
+detectO2O=false
+useJavaTypes=true
+reSettingsFile=

@@ -23,6 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
     <h1>
     	Hello！欢迎访问这个项目，此项目仅提供后台数据接口，不存在本身的交互。请访问<a href="b.topiniu.com">这里</a>。
+    	<a href="http://localhost:8080/Project_B/ajax/manager">click</a>
     </h1>
   </body>
 </html>
