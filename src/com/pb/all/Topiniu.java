@@ -9,7 +9,6 @@ public class Topiniu {
 
 	public static void responseIt(HttpServletResponse response,String str) throws IOException{
 		
-		response.setHeader("Access-Control-Allow-Origin", "*");
 		response.setCharacterEncoding("UTF-8");
 		PrintWriter out = response.getWriter();
 		out.write(str);

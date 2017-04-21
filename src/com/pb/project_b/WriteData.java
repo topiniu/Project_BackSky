@@ -38,6 +38,8 @@ public class WriteData extends HttpServlet {
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+
+		response.setHeader("Access-Control-Allow-Origin", "*");
 		FileDao fd = new FileDao();
 		
 		String data = request.getParameter("data");
