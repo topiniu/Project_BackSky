@@ -43,19 +43,16 @@ public class AddQuestionServlet extends HttpServlet {
 		
 		res.setHeader("Access-Control-Allow-Origin", "*");
 		System.out.println("AddQuestionServlet");
-		
+//		var data = "id="+item._id+
+//	            "&content="+item._content+
+//	            "&answers="+item._answers+
+//	            "&rightAnswers="+item._rightAnswers+
+//	            "&managerId="+item._managerId;
+
 		String data = req.getParameter("data");
 		
-		Object[] questiones = data.split(",");
-		
-		for(int i=0;i<questiones.length;i++){
-			Question q = (Question) questiones[i];
-			System.out.println(q.getContent());
-		}
-		
-		System.out.println(questiones.length);
-		
-//		System.out.println(data);
+		Question[] q = gson.fromJson(data, Question[].class);
+		System.out.println(q[0].getContent());
 		
 	}
 	

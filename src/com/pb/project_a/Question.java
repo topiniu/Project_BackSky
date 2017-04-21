@@ -16,18 +16,20 @@ public class Question {
 	
 	private String content;
 	
-	private List<String> answers;
+	private String[] answers;
 	
-	private List<String> rightAnswers;
+	private String[] rightAnswers;
 	
+	private String managerId;
 	
-	public Question(String frontID, String content, List<String> answers,
-			List<String> rightAnswers) {
-		super();
+	public Question(String frontID, String content, String[] answers,
+			String[] rightAnswers,String managerId) {
+//		super();
 		this.frontID = frontID;
 		this.content = content;
 		this.answers = answers;
 		this.rightAnswers = rightAnswers;
+		this.managerId = managerId;
 	}
 
 
@@ -51,27 +53,37 @@ public class Question {
 	}
 
 
-	public List<String> getAnswers() {
+	public String[] getAnswers() {
 		return answers;
 	}
 
 
-	public void setAnswers(List<String> answers) {
+	public void setAnswers(String[] answers) {
 		this.answers = answers;
 	}
 
 
-	public List<String> getRightAnswers() {
+	public String[] getRightAnswers() {
 		return rightAnswers;
 	}
 
 
-	public void setRightAnswers(List<String> rightAnswers) {
+	public void setRightAnswers(String[] rightAnswers) {
 		this.rightAnswers = rightAnswers;
 	}
 
 
 	public Question() {
 		// TODO Auto-generated constructor stub
+	}
+
+
+	public String getManagerId() {
+		return managerId;
+	}
+
+
+	public void setManagerId(String managerId) {
+		this.managerId = managerId;
 	}
 }
