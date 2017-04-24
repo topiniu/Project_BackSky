@@ -44,9 +44,10 @@ public class AddAnswersServlet extends HttpServlet {
 		String[] rightAnswers = req.getParameterValues("rightAnswers");
 		String questionId = req.getParameter("questionId");
 		
-		for(int i=0;i<answers.length;i++){
-			System.out.println(answers[i]);
-		}
+		if(answers!=null)
+			for(int i=0;i<answers.length;i++){
+				System.out.println(answers[i]);
+			}
 		System.out.println(questionId);
 	}
 
