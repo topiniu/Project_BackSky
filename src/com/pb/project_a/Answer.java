@@ -11,7 +11,7 @@ public class Answer {
 	
 	private String content;
 	
-	private int belongQuestionId;
+	private String belongQuestionId;
 
 	public int getID() {
 		return ID;
@@ -29,15 +29,15 @@ public class Answer {
 		this.content = content;
 	}
 
-	public int getBelongQuestionId() {
+	public String getBelongQuestionId() {
 		return belongQuestionId;
 	}
 
-	public void setBelongQuestionId(int belongQuestionId) {
+	public void setBelongQuestionId(String belongQuestionId) {
 		this.belongQuestionId = belongQuestionId;
 	}
 
-	public Answer(String content, int belongQuestionId) {
+	public Answer(String content, String belongQuestionId) {
 		super();
 		this.content = content;
 		this.belongQuestionId = belongQuestionId;

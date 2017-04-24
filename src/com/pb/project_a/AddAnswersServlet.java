@@ -7,6 +7,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
 public class AddAnswersServlet extends HttpServlet {
 
 	/**
@@ -40,14 +44,32 @@ public class AddAnswersServlet extends HttpServlet {
 		System.out.println(">>addAnswersServlet");
 		res.setHeader("Access-Control-Allow-Origin", "*");
 		
-		String[] answers = req.getParameterValues("answers");
-		String[] rightAnswers = req.getParameterValues("rightAnswers");
+		String[] answers = req.getParameter("answers").split(",");
+		String[] rightAnswers = req.getParameter("rightAnswers").split(",");
 		String questionId = req.getParameter("questionId");
+		
+		SessionFactory sf = HibernateSessionFactory.getSessionFactory();
+		
+		Session session = sf.openSession();
+		session.beginTransaction();
+		
 		
 		if(answers!=null)
 			for(int i=0;i<answers.length;i++){
-				System.out.println(answers[i]);
+				Answer a = new Answer(answers[i],questionId);
+				session.save(a);
+				
 			}
+		if(rightAnswers!=null)
+			for(int i=0;i<rightAnswers.length;i++){
+				RightAnswer a = new RightAnswer(rightAnswers[i],questionId);
+				session.save(a);
+			}
+		
+		session.getTransaction().commit();
+		session.close();
+		
+		
 		System.out.println(questionId);
 	}
 

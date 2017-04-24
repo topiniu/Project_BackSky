@@ -8,6 +8,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
 import com.google.gson.Gson;
 
 public class AddQuestionServlet extends HttpServlet {
@@ -53,6 +57,15 @@ public class AddQuestionServlet extends HttpServlet {
 		String managerId = req.getParameter("managerId");
 		
 		Question q = new Question(frontId,content,managerId);
+		
+		SessionFactory sf = HibernateSessionFactory.getSessionFactory();
+		
+		Session session = sf.openSession();
+		session.beginTransaction();
+		session.save(q);
+		session.getTransaction().commit();
+		session.close();
+		
 		
 		System.out.println(q.getContent());
 		
