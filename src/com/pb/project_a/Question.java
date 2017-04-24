@@ -16,19 +16,13 @@ public class Question {
 	
 	private String content;
 	
-	private String[] answers;
-	
-	private String[] rightAnswers;
 	
 	private String managerId;
 	
-	public Question(String frontID, String content, String[] answers,
-			String[] rightAnswers,String managerId) {
+	public Question(String frontID, String content, String managerId) {
 //		super();
 		this.frontID = frontID;
 		this.content = content;
-		this.answers = answers;
-		this.rightAnswers = rightAnswers;
 		this.managerId = managerId;
 	}
 
@@ -52,27 +46,6 @@ public class Question {
 		this.content = content;
 	}
 
-
-	public String[] getAnswers() {
-		return answers;
-	}
-
-
-	public void setAnswers(String[] answers) {
-		this.answers = answers;
-	}
-
-
-	public String[] getRightAnswers() {
-		return rightAnswers;
-	}
-
-
-	public void setRightAnswers(String[] rightAnswers) {
-		this.rightAnswers = rightAnswers;
-	}
-
-
 	public Question() {
 		// TODO Auto-generated constructor stub
 	}
@@ -85,5 +58,9 @@ public class Question {
 
 	public void setManagerId(String managerId) {
 		this.managerId = managerId;
+	}
+	
+	public void showSelf(){
+		
 	}
 }

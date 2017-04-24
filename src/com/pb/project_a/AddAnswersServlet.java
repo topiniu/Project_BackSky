@@ -1,21 +1,18 @@
 package com.pb.project_a;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.google.gson.Gson;
-
-public class AddQuestionServlet extends HttpServlet {
+public class AddAnswersServlet extends HttpServlet {
 
 	/**
 	 * Constructor of the object.
 	 */
-	public AddQuestionServlet() {
+	public AddAnswersServlet() {
 		super();
 	}
 
@@ -35,27 +32,22 @@ public class AddQuestionServlet extends HttpServlet {
 	public void init() throws ServletException {
 		// Put your code here
 	}
-
+	
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse res)
 			throws ServletException, IOException {
-		
-		res.setHeader("Access-Control-Allow-Origin", "*");
-		System.out.println("AddQuestionServlet");
-//		var data = "id="+item._id+
-//	            "&content="+item._content+
-//	            "&answers="+item._answers+
-//	            "&rightAnswers="+item._rightAnswers+
-//	            "&managerId="+item._managerId;
 
-		String frontId = req.getParameter("id");
-		String content = req.getParameter("content");
-		String managerId = req.getParameter("managerId");
+		System.out.println(">>addAnswersServlet");
+		res.setHeader("Access-Control-Allow-Origin", "*");
 		
-		Question q = new Question(frontId,content,managerId);
+		String[] answers = req.getParameterValues("answers");
+		String[] rightAnswers = req.getParameterValues("rightAnswers");
+		String questionId = req.getParameter("questionId");
 		
-		System.out.println(q.getContent());
-		
+		for(int i=0;i<answers.length;i++){
+			System.out.println(answers[i]);
+		}
+		System.out.println(questionId);
 	}
-	
+
 }
