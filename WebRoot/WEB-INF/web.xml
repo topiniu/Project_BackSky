@@ -34,6 +34,13 @@
     <servlet-name>AddAnswersServlet</servlet-name>
     <servlet-class>com.pb.project_a.AddAnswersServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoadQuestion</servlet-name>
+    <servlet-class>com.pb.project_a.LoadQuestionServlet</servlet-class>
+  </servlet>
+
 
 
 
@@ -57,6 +64,10 @@
   <servlet-mapping>
     <servlet-name>AddAnswersServlet</servlet-name>
     <url-pattern>/ajax/addAnswers</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoadQuestion</servlet-name>
+    <url-pattern>/ajax/loadQuestion</url-pattern>
   </servlet-mapping>
  <login-config>
   <auth-method>BASIC</auth-method>
