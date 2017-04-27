@@ -12,7 +12,6 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import com.google.gson.Gson;
 
 public class AddQuestionServlet extends HttpServlet {
 
